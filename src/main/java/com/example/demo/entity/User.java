@@ -103,24 +103,4 @@ public class User implements Serializable {
         result = 31 * result + addressId;
         return result;
     }
-
-    @ManyToOne
-    @JoinColumn(name = "job_id", referencedColumnName = "idjob", nullable = false,insertable = false,updatable = false)
-    public Job getJobByJobId() {
-        return jobByJobId;
-    }
-
-    public void setJobByJobId(Job jobByJobId) {
-        this.jobByJobId = jobByJobId;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "address_id", referencedColumnName = "idaddress", nullable = false,insertable = false,updatable = false)
-    public Address getAddressByAddressId() {
-        return addressByAddressId;
-    }
-
-    public void setAddressByAddressId(Address addressByAddressId) {
-        this.addressByAddressId = addressByAddressId;
-    }
 }
